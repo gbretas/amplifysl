@@ -37,36 +37,19 @@ function App() {
     <div className="App">
       <h1>Meu aplicativo de notas</h1>
       <input
-      style="
-      padding: 10px;
-      margin-bottom: 10px;
-      min-width: 300px;
-      border-radius: 30px;
-      border-style: solid;
-      /* border: 1px black; */
-  "
+        class="noome"
         onChange={e => setFormData({ ...formData, 'name': e.target.value})}
         placeholder="Nome da nota"
         value={formData.name}
       />
       <br/>
       <input
-      style="
-      padding: 10px;
-      margin-bottom: 10px;
-      min-width: 300px;
-      border-radius: 30px;
-      border-style: solid;
-      /* border: 1px black; */
-  "
+        class="noome"
         onChange={e => setFormData({ ...formData, 'description': e.target.value})}
         placeholder="Descrição da Nota"
         value={formData.description}
       /><br/>
-      <button style="
-    padding: 10px;
-    border-radius: 20px;
-" onClick={createNote}>Criar Nota</button>
+      <button class="submitb" onClick={createNote}>Criar Nota</button>
       <div style={{marginBottom: 30}}>
         {
           notes.map(note => (
